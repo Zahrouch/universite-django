@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       
+        <title>Accueil</title>
+               
+    </head>
+    <body>
+        <h1> Bienvenue dans l'application Université</h1>
+        {% if user.is_authenticated %}
+        <p>Bonjour {{user.username}}, vous êtes connecté.</p>
+        <a href="{% url  'liste_cours'  %}"> voir les cours</a>
+        <a href="{% url  'liste_enseignant'  %}"> voir les enseignants</a>
+        <a href="{% url  'deconnexion'  %}"> Se déconnecter</a>
+        {% else %}
+        <p> Vous n'êtes pas connecté</p>
+        <a href="{% url  'connexion'  %}"> Se connecter</a>
+        {% endif %}
+
+        
+        
+    </body>
+</html>
+
+
+<style>
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* TITRE */
+h1{
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* PARAGRAPHE */
+p{
+    font-size: 18px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* LIENS */
+a{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 18px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* HOVER */
+a:hover{
+    background-color: #2980b9;
+}
+</style>
+
+
