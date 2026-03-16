@@ -7,7 +7,7 @@
                
     </head>
     <body>
-        <h1> Bienvenue dans l'application Université</h1>
+        <h1> Bienvenue dans l'application Université git</h1>
         {% if user.is_authenticated %}
         <p>Bonjour {{user.username}}, vous êtes connecté.</p>
         <a href="{% url  'liste_cours'  %}"> voir les cours</a>

@@ -17,6 +17,8 @@ def liste_cours(request):
 def accueil(request):
     return render(request, 'cours/accueil.html')
 
+# liste d'jouter_cours.
+
 @login_required
 def ajouter_cours(request):
     form = CoursForm()
